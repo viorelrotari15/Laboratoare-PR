@@ -27,14 +27,14 @@ namespace SendMailTO.Controllers
             mm.To.Add(to);
             mm.Subject = subject;
             mm.Body = body;
-            mm.From = new MailAddress("viorelrotari15@gmail.com");
+            mm.From = new MailAddress("email@gmail.com");
             mm.IsBodyHtml = false;
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com");
             smtp.Port = 587;
             smtp.UseDefaultCredentials = true;
             smtp.EnableSsl = true;
-            smtp.Credentials = new System.Net.NetworkCredential("viorelrotari15@gmail.com", "069716871");
+            smtp.Credentials = new System.Net.NetworkCredential("toemail@gmail.com", "ggpass");
             smtp.Send(mm);
             ViewBag.message = "Mesajul este trimis catre " + em.To + "cu succes";
 
